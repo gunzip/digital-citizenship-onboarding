@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="it">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -14,7 +14,7 @@
     };
     (function () {
       var wf = document.createElement('script');
-      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.src = '//ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
       wf.type = 'text/javascript';
       wf.async = 'true';
       var s = document.getElementsByTagName('script')[0];
@@ -22,22 +22,182 @@
     })();
   </script>
 
-  <!-- <script src="//raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/ita-web-toolkit/vendor/modernizr.js"></script> -->
+  <link href="//italia.github.io/design-web-toolkit/build/build.css" rel="stylesheet" media="all" type="text/css" />
 
-  <link href="//raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/ita-web-toolkit/build/build.css" rel="stylesheet"
-    medial="all" />
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
 
-  <!-- <script src="//raw.githubusercontent.com/italia/design-web-toolkit/gh-pages/ita-web-toolkit/vendor/jquery.min.js"></script> -->
+    .localAccount {
+      padding: 5em;
+      background: #011f3d;
+    }
+
+    @media (max-width: 1023px) {
+      .localAccount {
+        padding: 1em;
+      }
+    }
+
+    a {
+      color: #ffa600;
+    }
+
+    button {
+      background: #ffa600;
+      padding: 0.6em;
+      cursor: pointer;
+    }
+
+    #forgotPassword {
+      font-size: 0.8em;
+    }
+
+    .password-label {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+    }
+
+    .password-label>label {}
+
+    .password-label>a {
+      align-self: flex-end;
+      padding-bottom: 0.8em;
+    }
+
+    input::placeholder {
+      color: #333;
+    }
+
+    input[type=password],
+    input[type=email],
+    input[type=text] {
+      width: 100%;
+      padding: 0.8em;
+    }
+
+    .intro>h2 {
+      font-weight: 400;
+      margin-bottom: 1em;
+    }
+
+    .entry-item {
+      padding-bottom: 2em;
+    }
+
+    .entry-item label {
+      display: block;
+      clear: both;
+      padding-top: 1em;
+      padding-bottom: 0.5em;
+    }
+
+    .divider {
+      border-top: 2px solid white;
+      margin-top: 1em;
+      padding-top: 1em;
+      text-align: center;
+    }
+
+    .create {
+      text-align: center;
+    }
+
+    .create a {
+      display: block;
+      clear: both;
+    }
+
+    .divider h2 {
+      padding-bottom: 0.5em;
+    }
+
+    body {
+      display: flex;
+      background-color: #004080;
+      color: white;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+
+    .logo {
+      position: absolute;
+      left: 1em;
+      top: 1em;
+    }
+
+    @media (max-width: 1023px) {
+      .logo {
+        display: none;
+      }
+    }
+
+    .wf-active {
+      font-family: "Titillium Web", sans-serif;
+    }
+  </style>
 
   <title>Sign-in / Sign-up</title>
 </head>
 
-<body class="t-Pac">
+<body>
+  <div>
 
-  <p>hello world</p>
-  <div id="api" data-name="SelfAsserted"></div>
+    <img src="https://italia.github.io/design-web-toolkit/theme/docs/logo-it.svg" class="logo" />
 
+    <!-- <div class="localAccount" role="form">
+      <div class="intro">
+        <h2>
+          Sign in with your existing account
+        </h2>
+      </div>
+      <div class="error pageLevel" aria-hidden="true" style="display: none;">
+        <p role="alert" tabindex="1"></p>
+      </div>
+      <div class="entry">
+        <div class="entry-item">
+          <label for="logonIdentifier">
+            Email Address
+          </label>
+          <div class="error itemLevel" aria-hidden="true" style="display: none;">
+            <p role="alert" tabindex="1"></p>
+          </div>
+          <input type="email" id="logonIdentifier" name="Username or email address" pattern="^[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+            placeholder="Email Address" value="" tabindex="1">
+        </div>
+        <div class="entry-item">
+          <div class="password-label">
+            <label for="password">Password</label>
+            <a id="forgotPassword" tabindex="2" href="/agidweb.onmicrosoft.com/B2C_1_TestPolicyDeleteMe/api/CombinedSigninAndSignup/forgotPassword?csrf_token=YzVXWTV3N0dZRGFPRk5wMEh5bXQ0Tm9CcGpzS0w4UW9PK0M4bnJLNUFBK1JEZGdHdkVWdjN3TTN1eTRSeXZ0OW9SZEl4Z0xib0M3d2prckVnUWVsVnc9PTsyMDE3LTExLTIxVDE1OjQwOjM4LjE0MjU1Mlo7Wi9OeVg3TkFQVG1GVmNmQnhNYi9rUT09O3siT3JjaGVzdHJhdGlvblN0ZXAiOjF9&amp;tx=StateProperties=eyJUSUQiOiI0ZDFjNDc4YS05YTFjLTRlOTctODA2Ny0zMWUwMDIyNjQ0ZTYifQ&amp;p=B2C_1_TestPolicyDeleteMe">Forgot your password?</a>
+          </div>
+          <div class="error itemLevel" aria-hidden="true" style="display: none;">
+            <p role="alert" tabindex="1"></p>
+          </div>
+          <input type="password" id="password" name="Password" placeholder="Password" tabindex="1">
+        </div>
+        <div class="working"></div>
+        <div class="buttons">
+          <button id="next" tabindex="1">Sign in</button>
+        </div>
+      </div>
+
+      <div class="divider">
+        <h2>OR</h2>
+      </div>
+      <div class="create">
+        <p>
+          Don't have an account?
+          <a id="createAccount" tabindex="1" href="/agidweb.onmicrosoft.com/B2C_1_TestPolicyDeleteMe/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=YzVXWTV3N0dZRGFPRk5wMEh5bXQ0Tm9CcGpzS0w4UW9PK0M4bnJLNUFBK1JEZGdHdkVWdjN3TTN1eTRSeXZ0OW9SZEl4Z0xib0M3d2prckVnUWVsVnc9PTsyMDE3LTExLTIxVDE1OjQwOjM4LjE0MjU1Mlo7Wi9OeVg3TkFQVG1GVmNmQnhNYi9rUT09O3siT3JjaGVzdHJhdGlvblN0ZXAiOjF9&amp;tx=StateProperties=eyJUSUQiOiI0ZDFjNDc4YS05YTFjLTRlOTctODA2Ny0zMWUwMDIyNjQ0ZTYifQ&amp;p=B2C_1_TestPolicyDeleteMe">Sign up now</a>
+        </p>
+      </div>
+    </div> -->
+
+    <div id="api" data-name="SelfAsserted"></div>
+  </div>
 </body>
-</head>
 
 </html>
