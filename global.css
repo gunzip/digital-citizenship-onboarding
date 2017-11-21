@@ -4,8 +4,8 @@ body {
 }
 
 .container {
-  min-width: 30em;
-  padding: 2em 4em 2em 4em;
+  width: 30em;
+  padding: 4em 4em 2em 4em;
   background: #011f3d;
 }
 
@@ -118,7 +118,11 @@ body {
   justify-content: center;
   font-family: "Titillium Web", sans-serif;
 }
-
+@media (max-width: 1023px) {
+  body {
+    height: auto;
+  }
+}
 .error-page-content,
 .error {
   color: white;
@@ -150,7 +154,10 @@ body {
   padding: 0.5em;
 }
 .error.itemLevel {
-  padding-bottom: 0.2em;
+  margin-bottom: 0.2em;
+  padding-bottom: 1em;
+  font-size: 0.9em;
+  line-height: 1.5;
 }
 [data-help] {
   display: none;
