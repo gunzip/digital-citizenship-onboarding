@@ -16,7 +16,7 @@
     }
 
     .localAccount {
-      padding: 5em;
+      padding: 2em 4em 2em 4em;
       background: #011f3d;
     }
 
@@ -64,9 +64,24 @@
       padding: 0.8em;
     }
 
+    h1 {
+      font-size: 1.6em;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 0.2em;
+    }
+
+    @media (max-width: 1023px) {
+      h1 {
+        font-size: 1.2em;
+      }
+    }
+
     .intro>h2 {
+      font-size: 1em;
       font-weight: 400;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
     }
 
     .entry-item {
@@ -102,6 +117,7 @@
 
     body {
       display: flex;
+      flex-wrap: wrap;
       background-color: #004080;
       color: white;
       align-items: center;
@@ -127,11 +143,11 @@
 </head>
 
 <body>
-  <div>
-
+  <div class="container">
     <img src="https://italia.github.io/design-web-toolkit/theme/docs/logo-it.svg" class="logo" />
+    <h1>Digital Citizenship API</h1>
 
-    <!-- <div class="localAccount" role="form">
+    <div class="localAccount" role="form">
       <div class="intro">
         <h2>
           Sign in with your existing account
@@ -176,7 +192,7 @@
           <a id="createAccount" tabindex="1" href="/agidweb.onmicrosoft.com/B2C_1_TestPolicyDeleteMe/api/CombinedSigninAndSignup/unified?local=signup&amp;csrf_token=YzVXWTV3N0dZRGFPRk5wMEh5bXQ0Tm9CcGpzS0w4UW9PK0M4bnJLNUFBK1JEZGdHdkVWdjN3TTN1eTRSeXZ0OW9SZEl4Z0xib0M3d2prckVnUWVsVnc9PTsyMDE3LTExLTIxVDE1OjQwOjM4LjE0MjU1Mlo7Wi9OeVg3TkFQVG1GVmNmQnhNYi9rUT09O3siT3JjaGVzdHJhdGlvblN0ZXAiOjF9&amp;tx=StateProperties=eyJUSUQiOiI0ZDFjNDc4YS05YTFjLTRlOTctODA2Ny0zMWUwMDIyNjQ0ZTYifQ&amp;p=B2C_1_TestPolicyDeleteMe">Sign up now</a>
         </p>
       </div>
-    </div> -->
+    </div>
 
     <div id="api" data-name="SelfAsserted"></div>
   </div>
