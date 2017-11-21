@@ -15,14 +15,16 @@
       height: 100%;
     }
 
-    .localAccount {
+    .container {
+      min-width: 30em;
       padding: 2em 4em 2em 4em;
       background: #011f3d;
     }
 
     @media (max-width: 1023px) {
-      .localAccount {
+      .container {
         padding: 1em;
+        min-width: 100%;
       }
     }
 
@@ -73,12 +75,14 @@
 
     @media (max-width: 1023px) {
       h1 {
-        font-size: 1.2em;
+        font-size: 1.4em;
       }
     }
 
     .intro>h2 {
-      font-size: 1em;
+      text-align: center;
+      color: #9ebbd8;
+      font-size: 0.8em;
       font-weight: 400;
       margin-bottom: 0.5em;
       margin-top: 0.5em;
@@ -127,14 +131,15 @@
     }
 
     .logo {
-      position: absolute;
-      left: 1em;
-      top: 1em;
+      float: left;
+      width: 2em;
+      height: 2em;
     }
 
     @media (max-width: 1023px) {
       .logo {
-        display: none;
+        width: 1.8em;
+        height: 1.8em;
       }
     }
   </style>
